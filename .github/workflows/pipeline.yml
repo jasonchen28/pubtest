@@ -1,0 +1,17 @@
+name: Condition and Expression Demo
+
+on:
+  workflow_dispatch:
+    inputs:
+      failstep:
+        description: 'Fail step in Job1 (yes/no)'
+        required: true
+        default: 'no'
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: log
+        run: echo "first job"
